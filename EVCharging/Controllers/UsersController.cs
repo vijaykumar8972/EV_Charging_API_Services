@@ -90,34 +90,40 @@ namespace EVCharging.Controllers
         /// <returns></returns>
         [AllowAnonymous]
         [HttpPost("UpdateUsersProfile")]
-        public ActionResult UpdateUsersProfile(UsersModel usersModel)
+        public ActionResult UpdateUsersProfile(UsersModel model)
         {
             try
             {
-                var res = userServices.GetById(usersModel.UserId);
+                var res = userServices.GetById(model.UserId);
                 if (res != null)
                 {
-                    var users = new Users()
+                    res.UpdatedAt = DateTime.Now;
+                    res.MobileNumber = model.MobileNumber;
+                    res.UserName = model.UserName;
+                    res.EmailId = model.EmailId;
+                    if ((model.ProfileImage != null) && model.ProfileImage != "")
                     {
-                        EmailId = usersModel.EmailId,
-                        MobileNumber = usersModel.MobileNumber,
-                        UserName = usersModel.UserName,
-                        CreatedAt = DateTime.Now,
-                        UpdatedAt = DateTime.Now,
-                        IsActive = true
-                    };
-
-                    res.ProfileImage = string.Format(PathUtils.UserProfile, "EVCharging", res.Id.ToString(), "Photos", res.Id.ToString() + ".jpg");
-                    string path = Path.Combine(hostingEnvironment.ContentRootPath, res.ProfileImage);
-                    fileHelper.CreateDirectoryIfNotExists(Path.GetDirectoryName(Path.GetFullPath(path)));
-                    string imageName = res.ProfileImage + ".jpg";
-                    string imgPath = Path.Combine(path, imageName);
-                    byte[] imageBytes = Convert.FromBase64String(usersModel.ProfileImage);
-                    System.IO.File.WriteAllBytes(path, imageBytes);
-
+                        res.ProfileImage = string.Format(PathUtils.UserProfile, "EVCharging", res.Id.ToString(), "Photos", res.Id.ToString() + ".jpg");
+                        string path = Path.Combine(hostingEnvironment.ContentRootPath, res.ProfileImage);
+                        fileHelper.CreateDirectoryIfNotExists(Path.GetDirectoryName(Path.GetFullPath(path)));
+                        string imageName = res.ProfileImage + ".jpg";
+                        string imgPath = Path.Combine(path, imageName);
+                        try
+                        {
+                            byte[] imageBytes = Convert.FromBase64String(model.ProfileImage);
+                            System.IO.File.WriteAllBytes(path, imageBytes);
+                            model.ProfileImage = res.ProfileImage;
+                        }
+                        catch (Exception ex)
+                        {
+                            return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                        }
+                    }
                     userServices.Update(res, res.Id);
-                    userServices.Update(users, users.Id);
-                    return StatusCode(StatusCodes.Status201Created,usersModel);
+                    model.ProfileImage = res.ProfileImage;
+                    model.ProfileImage.Replace(@"\\", @"/");
+
+                    return StatusCode(StatusCodes.Status201Created, model);
                 }
                 else
                 {
@@ -161,7 +167,7 @@ namespace EVCharging.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        [Authorize]
+        [AllowAnonymous]
         [HttpGet("GetUsers")]
         public ActionResult<List<Users>> GetUsers()
         {
@@ -326,7 +332,7 @@ namespace EVCharging.Controllers
                 Users users;
                 if (Emailid)
                 {
-                    
+
                     users = userServices.GetUsersDetailes(model.Email);
                     if (users != null) // multiple Emails Ids will store
                     {
@@ -359,13 +365,13 @@ namespace EVCharging.Controllers
                 return StatusCode(StatusCodes.Status404NotFound, ex);
             }
         }
-      
-        
-       
+
+
+
     }
 
 
-    
-    
-    }
+
+
+}
 

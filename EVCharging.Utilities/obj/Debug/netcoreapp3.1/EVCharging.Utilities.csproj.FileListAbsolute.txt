@@ -34,3 +34,15 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Utilities
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CopyComplete
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.pdb
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.deps.json
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.pdb
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Models.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Models.pdb
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csprojAssemblyReference.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.AssemblyInfoInputs.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.AssemblyInfo.cs
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CoreCompileInputs.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CopyComplete
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.pdb

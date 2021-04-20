@@ -4,6 +4,6 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>E:\VAFIIS\EVChargeIIS</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\collections\EVGitHub\publish</_PublishTargetUrl>
   </PropertyGroup>
 </Project>

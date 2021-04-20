@@ -1,0 +1,14 @@
+
+-------------------------------------
+Date :: 21-04-2021 01:30:25 AM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+Exception ::System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(UsersModel usersModel) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 115
+-------------------------------------
+
+
