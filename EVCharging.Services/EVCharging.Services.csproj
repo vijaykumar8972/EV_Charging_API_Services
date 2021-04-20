@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MimeKit" Version="2.11.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EVCharging.Data\EVCharging.Data.csproj" />
+    <ProjectReference Include="..\EVCharging.Models\EVCharging.Models.csproj" />
+    <ProjectReference Include="..\EVCharging.Utilities\EVCharging.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

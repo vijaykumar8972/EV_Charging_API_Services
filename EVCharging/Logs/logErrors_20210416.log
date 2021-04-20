@@ -1,0 +1,35 @@
+
+-------------------------------------
+Date :: 16-04-2021 17:12:25
+NameSpace :: UsersController
+Method :: Update
+Values :: 
+Error Message :: Invalid JSON number '607964781d'.
+Exception ::System.FormatException: Invalid JSON number '607964781d'.
+   at MongoDB.Bson.IO.JsonScanner.GetNumberToken(JsonBuffer buffer, Int32 firstChar)
+   at MongoDB.Bson.IO.JsonReader.PopToken()
+   at MongoDB.Bson.IO.JsonReader.ReadBsonType()
+   at MongoDB.Bson.IO.BsonReader.GetCurrentBsonType()
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.EnsureBsonTypeEquals(IBsonReader reader, BsonType bsonType)
+   at MongoDB.Bson.Serialization.Serializers.BsonValueSerializerBase`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.BsonDocument.Parse(String json)
+   at MongoDB.Driver.JsonFilterDefinition`1.Render(IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.ConvertWriteModelToWriteRequest(WriteModel`1 model, Int32 index)
+   at System.Linq.Enumerable.SelectIterator[TSource,TResult](IEnumerable`1 source, Func`3 selector)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at MongoDB.Driver.Core.Operations.BulkMixedWriteOperation..ctor(CollectionNamespace collectionNamespace, IEnumerable`1 requests, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateBulkWriteOperation(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWrite(IClientSessionHandle session, IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass23_0.<BulkWrite>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.BulkWrite(IEnumerable`1 requests, BulkWriteOptions options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionBase`1.<>c__DisplayClass82_0.<ReplaceOne>b__0(IEnumerable`1 requests, BulkWriteOptions bulkWriteOptions)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOne(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, Func`3 bulkWrite)
+   at MongoDB.Driver.MongoCollectionBase`1.ReplaceOne(FilterDefinition`1 filter, TDocument replacement, ReplaceOptions options, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.ForgetPassword(Users user) in E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Services\Services\UserServices.cs:line 102
+   at EVCharging.Controllers.UsersController.ForgetPassword(ForgetPasswordModel model) in E:\VAFIIS\NewCoreProject\EVCharging\EVCharging\Controllers\UsersController.cs:line 245
+-------------------------------------
+
+

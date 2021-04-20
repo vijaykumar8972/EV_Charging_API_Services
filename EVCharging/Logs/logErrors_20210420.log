@@ -1,0 +1,250 @@
+
+-------------------------------------
+Date :: 20-04-2021 01:27:06 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 03:56:06 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 04:54:34 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 04:58:26 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: MobileNo already Exit
+Exception ::System.Exception: MobileNo already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 67
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 04:58:49 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 04:59:05 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 04:59:33 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: MobileNo already Exit
+Exception ::System.Exception: MobileNo already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 67
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:48:23 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:48:40 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 61
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:49:03 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: MobileNo already Exit
+Exception ::System.Exception: MobileNo already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 67
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:51:03 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: 'string' is not a valid 24 digit hex string.
+Exception ::System.FormatException: 'string' is not a valid 24 digit hex string.
+   at EVCharging.Services.UserServices.Update(Users users, String Id) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 178
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 113
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:51:53 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: 'string' is not a valid 24 digit hex string.
+Exception ::System.FormatException: 'string' is not a valid 24 digit hex string.
+   at EVCharging.Services.UserServices.Update(Users users, String Id) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 178
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 113
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 09:52:05 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: '12' is not a valid 24 digit hex string.
+Exception ::System.FormatException: '12' is not a valid 24 digit hex string.
+   at EVCharging.Services.UserServices.Update(Users users, String Id) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 178
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 113
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:17:44 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 64
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:21:56 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 64
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:22:10 PM
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Services\Services\UserServices.cs:line 64
+   at EVCharging.Controllers.UsersController.Registration(Users users) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:24:40 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: Incorrect Content-Type: application/json
+Exception ::System.InvalidOperationException: Incorrect Content-Type: application/json
+   at Microsoft.AspNetCore.Http.Features.FormFeature.ReadForm()
+   at Microsoft.AspNetCore.Http.DefaultHttpRequest.get_Form()
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(UsersModel usersModel)
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:25:25 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: Incorrect Content-Type: application/json
+Exception ::System.InvalidOperationException: Incorrect Content-Type: application/json
+   at Microsoft.AspNetCore.Http.Features.FormFeature.ReadForm()
+   at Microsoft.AspNetCore.Http.DefaultHttpRequest.get_Form()
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(UsersModel usersModel)
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 20-04-2021 11:35:59 PM
+NameSpace :: UsersController
+Method :: UpdateUsersProfile
+Values :: 
+Error Message :: Incorrect Content-Type: application/json
+Exception ::System.InvalidOperationException: Incorrect Content-Type: application/json
+   at Microsoft.AspNetCore.Http.Features.FormFeature.ReadForm()
+   at Microsoft.AspNetCore.Http.DefaultHttpRequest.get_Form()
+   at EVCharging.Controllers.UsersController.UpdateUsersProfile(UsersModel usersModel)
+-------------------------------------
+
+

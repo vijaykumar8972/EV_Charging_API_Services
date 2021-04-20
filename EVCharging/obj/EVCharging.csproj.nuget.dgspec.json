@@ -1,0 +1,392 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging\\EVCharging.csproj": {}
+  },
+  "projects": {
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\EVCharging.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\EVCharging.Data.csproj",
+        "projectName": "EVCharging.Data",
+        "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\EVCharging.Data.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj",
+        "projectName": "EVCharging.Models",
+        "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.12.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\EVCharging.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\EVCharging.Services.csproj",
+        "projectName": "EVCharging.Services",
+        "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\EVCharging.Services.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\EVCharging.Data.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Data\\EVCharging.Data.csproj"
+              },
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj"
+              },
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.11.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj",
+        "projectName": "EVCharging.Utilities",
+        "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging\\EVCharging.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging\\EVCharging.csproj",
+        "projectName": "EVCharging",
+        "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging\\EVCharging.csproj",
+        "packagesPath": "C:\\Users\\visualapp\\.nuget\\packages\\",
+        "outputPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\visualapp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\EVCharging.Services.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Services\\EVCharging.Services.csproj"
+              },
+              "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj": {
+                "projectPath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Utilities\\EVCharging.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.10.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

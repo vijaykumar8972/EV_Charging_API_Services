@@ -1,0 +1,17 @@
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.deps.json
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.dll
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.pdb
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.AssemblyInfoInputs.cache
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.AssemblyInfo.cs
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.csproj.CoreCompileInputs.cache
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.dll
+E:\VAFIIS\NewCoreProject\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.pdb
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.deps.json
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\bin\Release\netcoreapp3.1\EVCharging.Models.pdb
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.csprojAssemblyReference.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.AssemblyInfoInputs.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.AssemblyInfo.cs
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.csproj.CoreCompileInputs.cache
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging.Models\obj\Release\netcoreapp3.1\EVCharging.Models.pdb
