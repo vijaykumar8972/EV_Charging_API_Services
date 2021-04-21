@@ -8,7 +8,7 @@ namespace EVCharging.Services
     public interface IUserServices
     {
         Users GetById(string Id);
-        FeedBackMdel List<GetByFeedId>(string Id);
+      
         Users AuthUser(string userName, string passWord);
         List<Users> GetListUser();
         object GetListUserAsync(UserMapParams user);
@@ -18,11 +18,13 @@ namespace EVCharging.Services
         Users GetUsersDetailes(string EmailId);        
         List<MSTModel> GetManufactureModelDetailes(string Name);
         List<MSTManufacture> GetManufactureDetailes();
-        List<MstChargingAbout> GetByContentDetailes();
-        FeedBackMdel feedBackMdels();
-
+        List<MstChargingAbout> GetByContentDetailes();    
         bool ForgetPassword(Users user);
-        
-        
+        List<FeedBackMdel> GetFeedBackMdels();
+        List<FeedBackMdel> GetFeedBackId(string userId);
+        bool Create(FeedBackMdel feedBack);
+        List<ChargingHistoryModel> chargingHistoryModels();
+        object GetChargingHistoryId(string userId);
+        object Create(ChargingHistoryModel chargingHistory);
     }
 }

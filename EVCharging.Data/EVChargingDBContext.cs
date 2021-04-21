@@ -26,7 +26,8 @@ namespace EVCharging.Data
         public IMongoCollection<Users> users => _database.GetCollection<Users>("Users");
         public IMongoCollection<MSTManufacture> Manufacture => _database.GetCollection<MSTManufacture>("MSTManufacture");
         public IMongoCollection<MSTModel> Model => _database.GetCollection<MSTModel>("MSTModel");
-        public IMongoCollection<MstChargingAbout> ChargingAbout => _database.GetCollection<MstChargingAbout>("MstCharging");
+        public IMongoCollection<MstChargingAbout> ChargingAbout => _database.GetCollection<MstChargingAbout>("MstAboutus");
         public IMongoCollection<FeedBackMdel> feedback => _database.GetCollection<FeedBackMdel>("FeedBack");
+        public IMongoCollection<ChargingHistoryModel> charginghistory => _database.GetCollection<ChargingHistoryModel>("ChargingHistoryModel");
     }
 }

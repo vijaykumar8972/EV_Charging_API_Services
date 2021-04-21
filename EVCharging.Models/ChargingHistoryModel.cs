@@ -6,17 +6,16 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace EVCharging.Models
 {
-    public class FeedBackMdel
+  public  class ChargingHistoryModel
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id { get; set; }
-        public string UserId{get;set;}
-        public string UserName { get; set; }
+        public string Id { get; set; }
         public string StationName { get; set; }
-        public string Comment { get; set; }       
+        public int StationId { get; set; }
+        public string KW { get; set; }
+        public string PortType { get; set; }
         public DateTime CraetedBy { get; set; }
-
 
     }
 }

@@ -23,6 +23,7 @@ namespace EVCharging.Models
         public DateTime CreatedAt { get; set; }
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime UpdatedAt { get; set; }
+        public string UserId { get; set; }
     }
 
     public class UsersModel

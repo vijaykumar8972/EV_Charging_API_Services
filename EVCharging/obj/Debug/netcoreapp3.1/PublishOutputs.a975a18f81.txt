@@ -1,4 +1,5 @@
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\PubTmp\Out\EVCharging.exe
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\PubTmp\Out\web.config
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\PubTmp\Out\appsettings.json
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\PubTmp\Out\EVCharging.dll

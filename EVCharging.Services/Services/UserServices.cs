@@ -24,6 +24,9 @@ namespace EVCharging.Services
         private readonly CryptoHelper cryptoHelper;
         private readonly EmailHelper emailHelper;
         private readonly IEmailConfig _emailConfig;
+
+        public int UserId { get; private set; }
+
         public UserServices(IEVChargingDatabaseSettings eVChargingDatabaseSettings, IEmailConfig emailConfig)
         {
             cryptoHelper = FoundationObject.FoundationObj.CryptoHelper;
@@ -98,10 +101,7 @@ namespace EVCharging.Services
             eVChargingDBContext.users.DeleteOne(n => n.Id == Id);
         }
 
-        public List<FeedBackMdel> feedBackMdels()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public bool ForgetPassword(Users user)
         {
@@ -246,10 +246,7 @@ namespace EVCharging.Services
             return users;
         }
 
-        public FeedBackMdel List<GetByFeedId>(string Id)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public void Update(Users users, string Id)
         {
@@ -263,9 +260,57 @@ namespace EVCharging.Services
             }
         }
 
-        FeedBackMdel IUserServices.feedBackMdels()
+       
+       
+
+       
+
+        
+
+        public List<FeedBackMdel> GetFeedBackMdels()
         {
-            throw new NotImplementedException();
+
+            List<FeedBackMdel> feedBackMdel = eVChargingDBContext.feedback.Find(n => true).ToList();
+            return feedBackMdel;
         }
+
+
+
+
+
+        public bool Create(FeedBackMdel feedBack)
+        {
+            feedBack.id= MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            eVChargingDBContext.feedback.InsertOne(feedBack);
+            return true;
+        }
+
+        public List<ChargingHistoryModel> chargingHistoryModels()
+        {
+            List<ChargingHistoryModel>chargingHistoryModels = eVChargingDBContext.charginghistory.Find(n => true).ToList();
+            return chargingHistoryModels;
+        }
+
+        public object GetChargingHistoryId(string userId)
+        {
+            List<ChargingHistoryModel> chargingHistoryModels = eVChargingDBContext.charginghistory.Find(n => true).ToList();
+            return chargingHistoryModels;
+        }
+
+        public object Create(ChargingHistoryModel chargingHistory)
+        {
+            chargingHistory.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            eVChargingDBContext.charginghistory.InsertOne(chargingHistory);
+            return chargingHistory;
+        }
+
+        public List<FeedBackMdel> GetFeedBackId(string userId)
+        {
+            List<FeedBackMdel> feedBackMdels = new List<FeedBackMdel>();
+            feedBackMdels = eVChargingDBContext.feedback.Find(n => n.UserId == userId).ToList();
+            return feedBackMdels;
+        }
+
+      
     }
 }

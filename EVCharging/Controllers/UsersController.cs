@@ -88,7 +88,7 @@ namespace EVCharging.Controllers
         /// </summary>
         /// <param name="users"></param>
         /// <returns></returns>
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost("UpdateUsersProfile")]
         public ActionResult UpdateUsersProfile(UsersModel model)
         {
@@ -322,7 +322,7 @@ namespace EVCharging.Controllers
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost("ForgetPassword")]
         public IActionResult ForgetPassword(ForgetPasswsordModel model)
         {
@@ -367,6 +367,115 @@ namespace EVCharging.Controllers
         }
 
 
+        [Authorize]
+        [HttpGet("GetFeedBackId")]
+        public ActionResult GetFeedBackId(string UserId)             
+        {
+            try
+            {
+                var res = userServices.GetFeedBackId(UserId);
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "GetFeedBackId", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPost("PostFeedBack")]
+        public ActionResult PostFeedBack([FromBody] FeedBackMdel feedBack)
+        {
+           
+            try
+            {
+                var CheckUser = userServices.GetById(feedBack.UserId);
+                if (CheckUser!=null)
+                {
+                     userServices.Create(feedBack);
+                     return Ok();
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status404NotFound, "UserNotFound");
+                }
+               
+               
+               
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "PostFeedBack", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpGet("GetChargingHistory")]
+        public ActionResult<List<ChargingHistoryModel>> GetChargingHistory()
+        {
+            try
+            {
+                var res = userServices.chargingHistoryModels();
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "GetChargingHistory", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+        [Authorize]
+        [HttpGet("GetChargingHistoryId")]
+        public ActionResult GetChargingHistoryId(string UserId)
+        {
+            try
+            {
+                var res = userServices.GetChargingHistoryId(UserId);
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "GetChargingHistoryId", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPost("PostChargingHistory")]
+        public ActionResult PostChargingHistory([FromBody] ChargingHistoryModel chargingHistory)
+        {
+            try
+            {
+                var res = userServices.Create(chargingHistory);
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "PostChargingHistory", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                
+            }
+        }
 
     }
 
