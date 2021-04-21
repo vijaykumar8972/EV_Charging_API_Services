@@ -14,7 +14,9 @@ namespace EVCharging.Models
         public string UserId{get;set;}
         public string UserName { get; set; }
         public string StationName { get; set; }
-        public string Comment { get; set; }       
+        public string Comment { get; set; }
+
+        [BsonRepresentation(BsonType.DateTime)]
         public DateTime CraetedBy { get; set; }
 
 
