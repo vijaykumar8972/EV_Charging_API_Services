@@ -377,5 +377,10 @@ namespace EVCharging.Services
             var res = eVChargingDBContext.charginghistory.Find(n=>n.UserId==userId && n.StationId==StationId).FirstOrDefault();
             return res;
         }
+
+        public void deletehistorybyUserid(string userId, string StationId)
+        {
+            eVChargingDBContext.charginghistory.DeleteOne(n => n.UserId == userId && n.StationId == StationId);
+        }
     }
 }

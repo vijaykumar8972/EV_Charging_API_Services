@@ -535,9 +535,10 @@ namespace EVCharging.Controllers
 
                 return Ok(user);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                logHelper.ErrorLogs("UsersController", "postfav", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
@@ -562,9 +563,11 @@ namespace EVCharging.Controllers
 
                 return Ok(user);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+
+                logHelper.ErrorLogs("UsersController", "GetFav", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
@@ -589,9 +592,36 @@ namespace EVCharging.Controllers
 
                 return Ok(user);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+
+                logHelper.ErrorLogs("UsersController", "GetCheckChargingHistoryId", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpDelete("DeleteHistoryByID")]
+        public ActionResult deletehistorybyUserid(string UserId, string StationID)
+        {
+            try
+            {
+                 userServices.deletehistorybyUserid(UserId, StationID);
+                 return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "deletehistorybyUserid", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 

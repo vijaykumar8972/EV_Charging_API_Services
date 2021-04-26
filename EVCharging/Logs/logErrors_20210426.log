@@ -115,3 +115,55 @@ Exception ::System.FormatException: An error occurred while deserializing the St
 -------------------------------------
 
 
+
+-------------------------------------
+Date :: 26-04-2021 18:38:53
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "192.168.0.4:27017" }", EndPoint: "192.168.0.4:27017", State: "Disconnected", Type: "Unknown", LastUpdateTimestamp: "2021-04-26T13:08:21.7938322Z" }] }.
+Exception ::System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "192.168.0.4:27017" }", EndPoint: "192.168.0.4:27017", State: "Disconnected", Type: "Unknown", LastUpdateTimestamp: "2021-04-26T13:08:21.7938322Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.FirstOrDefault[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at MongoDB.Driver.IFindFluentExtensions.FirstOrDefault[TDocument,TProjection](IFindFluent`2 find, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.Create(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 65
+   at EVCharging.Controllers.UsersController.Registration(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 26-04-2021 18:40:20
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: EmailID already Exit
+Exception ::System.Exception: EmailID already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 70
+   at EVCharging.Controllers.UsersController.Registration(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 26-04-2021 18:40:35
+NameSpace :: UsersController
+Method :: Registration
+Values :: 
+Error Message :: MobileNo already Exit
+Exception ::System.Exception: MobileNo already Exit
+   at EVCharging.Services.UserServices.Create(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 76
+   at EVCharging.Controllers.UsersController.Registration(Users users) in D:\EV NEW API\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 72
+-------------------------------------
+
+

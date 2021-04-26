@@ -33,5 +33,6 @@ namespace EVCharging.Services
         List<FavModel> GetFav(string userId);
         FavModel postfav(FavModel favModel);
         List<FeedBackMdel> GetAllFeedBack(string StationId);
+        void deletehistorybyUserid(string userId, string StationId);
     }
 }

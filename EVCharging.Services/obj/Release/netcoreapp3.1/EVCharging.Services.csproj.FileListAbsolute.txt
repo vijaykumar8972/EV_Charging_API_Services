@@ -46,3 +46,19 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\obj\Release
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.csproj.CopyComplete
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Services.deps.json
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Services.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Services.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Data.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Models.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Utilities.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Data.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Models.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\bin\Release\netcoreapp3.1\EVCharging.Utilities.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.csprojAssemblyReference.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.AssemblyInfoInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.AssemblyInfo.cs
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.csproj.CoreCompileInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.csproj.CopyComplete
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Services\obj\Release\netcoreapp3.1\EVCharging.Services.pdb

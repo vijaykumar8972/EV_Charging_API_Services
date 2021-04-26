@@ -34,3 +34,15 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Data\obj\Release\net
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.csproj.CopyComplete
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\bin\Release\netcoreapp3.1\EVCharging.Data.deps.json
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\bin\Release\netcoreapp3.1\EVCharging.Data.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\bin\Release\netcoreapp3.1\EVCharging.Data.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\bin\Release\netcoreapp3.1\EVCharging.Models.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\bin\Release\netcoreapp3.1\EVCharging.Models.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.csprojAssemblyReference.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.AssemblyInfoInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.AssemblyInfo.cs
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.csproj.CoreCompileInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.csproj.CopyComplete
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Data\obj\Release\netcoreapp3.1\EVCharging.Data.pdb

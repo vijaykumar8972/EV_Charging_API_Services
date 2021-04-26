@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Ju/n1EY7R5Lq4Zvzeq5/kXi+VButF7W5zhiydHJI7NIZ9EcGz0SIxJDqnex7LxRnOX7RVRyz6mXry7U0E19oEA==",
+  "dgSpecHash": "LXo5pIwnYxvmPBuzijqhovsj8DwmSyycMKGiXaltM5KazeYMm0gMZZDe5MK00Ap/Z3KCIFpCpF4bcjoddABQ3w==",
   "success": true,
-  "projectFilePath": "E:\\collections\\EVGitHub\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj",
+  "projectFilePath": "D:\\EV NEW API\\EV_Charging_API_Services\\EVCharging.Models\\EVCharging.Models.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\visualapp\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.5\\microsoft.aspnetcore.http.features.5.0.5.nupkg.sha512",
-    "C:\\Users\\visualapp\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\visualapp\\.nuget\\packages\\mongodb.bson\\2.12.2\\mongodb.bson.2.12.2.nupkg.sha512",
-    "C:\\Users\\visualapp\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\visualapp\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
-    "C:\\Users\\visualapp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "C:\\Users\\valuesoft\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.5\\microsoft.aspnetcore.http.features.5.0.5.nupkg.sha512",
+    "C:\\Users\\valuesoft\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\valuesoft\\.nuget\\packages\\mongodb.bson\\2.12.2\\mongodb.bson.2.12.2.nupkg.sha512",
+    "C:\\Users\\valuesoft\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\valuesoft\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\valuesoft\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

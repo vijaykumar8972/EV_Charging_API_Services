@@ -46,3 +46,15 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CopyComplete
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.deps.json
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Utilities.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Models.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\bin\Debug\netcoreapp3.1\EVCharging.Models.pdb
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csprojAssemblyReference.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.AssemblyInfoInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.AssemblyInfo.cs
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CoreCompileInputs.cache
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.csproj.CopyComplete
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.dll
+D:\EV NEW API\EV_Charging_API_Services\EVCharging.Utilities\obj\Debug\netcoreapp3.1\EVCharging.Utilities.pdb
