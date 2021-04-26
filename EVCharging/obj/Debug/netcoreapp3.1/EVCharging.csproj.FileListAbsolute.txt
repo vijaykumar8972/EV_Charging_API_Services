@@ -214,6 +214,7 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\obj\Debug
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\obj\Debug\netcoreapp3.1\EVCharging.genruntimeconfig.cache
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\EVCharging\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\bin\Debug\netcoreapp3.1\web.config
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\bin\Debug\netcoreapp3.1\appsettings.json
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\bin\Debug\netcoreapp3.1\EVCharging.exe
@@ -290,4 +291,3 @@ E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\EVCharging.dll
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\EVCharging.pdb
 E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\obj\Debug\netcoreapp3.1\EVCharging.genruntimeconfig.cache
-E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\bin\Debug\netcoreapp3.1\web.config

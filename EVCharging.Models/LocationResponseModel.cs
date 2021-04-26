@@ -23,7 +23,7 @@ namespace EVCharging.Models
         public object ParentChargePointID { get; set; }
         public int DataProviderID { get; set; }
         public object DataProvidersReference { get; set; }
-        public int OperatorID { get; set; }
+        public object OperatorID { get; set; }
         public object OperatorsReference { get; set; }
         public int UsageTypeID { get; set; }
         public object UsageCost { get; set; }
@@ -232,11 +232,11 @@ namespace EVCharging.Models
         public object Reference { get; set; }
         public object StatusTypeID { get; set; }
         public object StatusType { get; set; }
-        public int LevelID { get; set; }
+        public object LevelID { get; set; }
         public Level Level { get; set; }
         public object Amps { get; set; }
         public object Voltage { get; set; }
-        public double PowerKW { get; set; }
+        public string PowerKW { get; set; }
         public object CurrentTypeID { get; set; }
         public object CurrentType { get; set; }
         public object Quantity { get; set; }

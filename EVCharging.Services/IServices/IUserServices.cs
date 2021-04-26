@@ -6,7 +6,8 @@ using System.Text;
 namespace EVCharging.Services
 {
     public interface IUserServices
-    {
+    {      
+
         Users GetById(string Id);
       
         Users AuthUser(string userName, string passWord);
@@ -18,13 +19,19 @@ namespace EVCharging.Services
         Users GetUsersDetailes(string EmailId);        
         List<MSTModel> GetManufactureModelDetailes(string Name);
         List<MSTManufacture> GetManufactureDetailes();
+        
         List<MstChargingAbout> GetByContentDetailes();    
         bool ForgetPassword(Users user);
         List<FeedBackMdel> GetFeedBackMdels();
         List<FeedBackMdel> GetFeedBackId(string userId);
         bool Create(FeedBackMdel feedBack);
         List<ChargingHistoryModel> chargingHistoryModels();
-        object GetChargingHistoryId(string userId);
-        object Create(ChargingHistoryModel chargingHistory);
+        List<ChargingHistoryModel> GetChargingHistoryId(string userId);
+        ChargingHistoryModel GetCheckChargingHistoryId(string userId,string StationId);
+        ResponseViewModel postchargingHistory(ChargingHistoryModel chargingHistory);
+        object GetAllData();
+        List<FavModel> GetFav(string userId);
+        FavModel postfav(FavModel favModel);
+        List<FeedBackMdel> GetAllFeedBack(string StationId);
     }
 }

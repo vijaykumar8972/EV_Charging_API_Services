@@ -216,6 +216,12 @@ namespace EVCharging.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
+        
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [Authorize]
         [HttpGet("GetManufactureDetailes")]
         public ActionResult GetManufactureDetailes()
@@ -365,7 +371,12 @@ namespace EVCharging.Controllers
                 return StatusCode(StatusCodes.Status404NotFound, ex);
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+      
 
         [Authorize]
         [HttpGet("GetFeedBackId")]
@@ -383,6 +394,29 @@ namespace EVCharging.Controllers
             catch (Exception ex)
             {
                 logHelper.ErrorLogs("UsersController", "GetFeedBackId", "", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+      
+        [Authorize]
+        [HttpGet("GetAllFeedBack")]
+        public ActionResult GetAllFeedBack(string StationId)
+        {
+            try
+            {
+                var user = userServices.GetAllFeedBack(StationId);
+
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                logHelper.ErrorLogs("UsersController", "GetAllFeedBack", "", ex);
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
@@ -462,10 +496,14 @@ namespace EVCharging.Controllers
         {
             try
             {
-                var res = userServices.Create(chargingHistory);
+                var res = userServices.postchargingHistory(chargingHistory);
                 if (res == null)
                 {
                     return NotFound();
+                }
+                if (res.StatusCode=="208")
+                {
+                    return NotFound(res);
                 }
                 return Ok(res);
             }
@@ -476,6 +514,87 @@ namespace EVCharging.Controllers
                 
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpPost("postfav")]
+        public ActionResult postfav(FavModel FavMod)
+        {
+            try
+            {
+                var user = userServices.postfav(FavMod);
+
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpGet("GetFav")]
+        public ActionResult GetFav(string UserId)
+        {
+            try
+            {
+                var user = userServices.GetFav(UserId);
+
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpGet("GetCheckChargingHistoryId")]
+        public ActionResult GetCheckChargingHistoryId(string UserId ,string StationID)
+        {
+            try
+            {
+                var user = userServices.GetCheckChargingHistoryId(UserId,StationID);
+
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
     }
 

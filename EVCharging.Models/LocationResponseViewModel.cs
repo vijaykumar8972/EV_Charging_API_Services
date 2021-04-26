@@ -15,8 +15,11 @@ namespace EVCharging.Models
 
         public List<LevelMdel> levelMdel { get; set; }
 
+     
+      
         public List<CurrentType> currentType { get; set; }
-        public int numberOfPoints { get; set; }
+
+        public NumberOfPoints numberOfPoints { get; set; }
         public string dateLastStatusUpdate { get; set; }
     }
     public class DataProviderViewMdel
@@ -35,7 +38,7 @@ namespace EVCharging.Models
     public class AddressInfoMdel
     {
 
-
+        public object Id { get; set; }
         public string Title { get; set; }
         public string AddressLine1 { get; set; }
         public string Town { get; set; }
@@ -63,7 +66,7 @@ namespace EVCharging.Models
     {
         public object IsFastChargeCapable { get; set; }
         public string Title { get; set; }
-        public double PowerKW { get; set; }
+        public string PowerKW { get; set; }
 
 
     }
@@ -80,5 +83,14 @@ namespace EVCharging.Models
         public double longitude { get; set; }
         public int Distance { get; set; }
         public int MaxResult { get; set; }
+    }
+    public class NumberOfPoints
+    {
+
+        public int NumberOfPoint { get; set; }
+    }
+    public class DateLastStatusUpdate
+    {
+        public object DateLastStatusUpdates { get; set; }
     }
 }

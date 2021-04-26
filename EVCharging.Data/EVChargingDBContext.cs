@@ -29,5 +29,6 @@ namespace EVCharging.Data
         public IMongoCollection<MstChargingAbout> ChargingAbout => _database.GetCollection<MstChargingAbout>("MstAboutus");
         public IMongoCollection<FeedBackMdel> feedback => _database.GetCollection<FeedBackMdel>("FeedBack");
         public IMongoCollection<ChargingHistoryModel> charginghistory => _database.GetCollection<ChargingHistoryModel>("ChargingHistoryModel");
+        public IMongoCollection<FavModel> favmodel => _database.GetCollection<FavModel>("Tbl_PostFav");
     }
 }

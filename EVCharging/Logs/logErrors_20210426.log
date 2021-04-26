@@ -1,0 +1,117 @@
+
+-------------------------------------
+Date :: 26-04-2021 12:53:27 PM
+NameSpace :: UsersController
+Method :: GetChargingHistory
+Values :: 
+Error Message :: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+Exception ::System.FormatException: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+ ---> System.FormatException: Cannot deserialize a 'String' from BsonType 'Int32'.
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.DeserializeValue(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.chargingHistoryModels() in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 306
+   at EVCharging.Controllers.UsersController.GetChargingHistory() in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 458
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 26-04-2021 12:53:40 PM
+NameSpace :: UsersController
+Method :: GetChargingHistoryId
+Values :: 
+Error Message :: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+Exception ::System.FormatException: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+ ---> System.FormatException: Cannot deserialize a 'String' from BsonType 'Int32'.
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.DeserializeValue(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.GetChargingHistoryId(String userId) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 312
+   at EVCharging.Controllers.UsersController.GetChargingHistoryId(String UserId) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 479
+-------------------------------------
+
+
+
+-------------------------------------
+Date :: 26-04-2021 12:56:56 PM
+NameSpace :: UsersController
+Method :: GetChargingHistoryId
+Values :: 
+Error Message :: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+Exception ::System.FormatException: An error occurred while deserializing the StationId property of class EVCharging.Models.ChargingHistoryModel: Cannot deserialize a 'String' from BsonType 'Int32'.
+ ---> System.FormatException: Cannot deserialize a 'String' from BsonType 'Int32'.
+   at MongoDB.Bson.Serialization.Serializers.StringSerializer.DeserializeValue(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SealedClassSerializerBase`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.Serializers.SerializerBase`1.MongoDB.Bson.Serialization.IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize(IBsonSerializer serializer, BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   --- End of inner exception stack trace ---
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeMemberValue(BsonDeserializationContext context, BsonMemberMap memberMap)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.DeserializeClass(BsonDeserializationContext context)
+   at MongoDB.Bson.Serialization.BsonClassMapSerializer`1.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+   at MongoDB.Bson.Serialization.IBsonSerializerExtensions.Deserialize[TValue](IBsonSerializer`1 serializer, BsonDeserializationContext context)
+   at MongoDB.Driver.Core.Operations.CursorBatchDeserializationHelper.DeserializeBatch[TDocument](RawBsonArray batch, IBsonSerializer`1 documentSerializer, MessageEncoderSettings messageEncoderSettings)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursorBatch(BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.CreateCursor(IChannelSourceHandle channelSource, BsonDocument commandResult)
+   at MongoDB.Driver.Core.Operations.FindCommandOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(RetryableReadContext context, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Operations.FindOperation`1.Execute(IReadBinding binding, CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.ExecuteReadOperation[TResult](IReadBinding binding, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, ReadPreference readPreference, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.ExecuteReadOperation[TResult](IClientSessionHandle session, IReadOperation`1 operation, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.GetChargingHistoryId(String userId) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 312
+   at EVCharging.Controllers.UsersController.GetChargingHistoryId(String UserId) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 479
+-------------------------------------
+
+

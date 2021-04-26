@@ -35,4 +35,6 @@ namespace EVCharging.Models
         public string EmailId { get; set; }
         public string ProfileImage { get; set; }
     }
+
+
 }

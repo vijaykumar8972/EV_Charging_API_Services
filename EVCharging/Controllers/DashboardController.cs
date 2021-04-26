@@ -24,7 +24,7 @@ namespace EVCharging.Controllers
             this.userServices = _userServices;
             this.authentication = FoundationObject.FoundationObj.authentication;
         }
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost("NearbyStations")]
         public ActionResult GeAllData(UserMapParams user)
         {
@@ -38,6 +38,8 @@ namespace EVCharging.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+      
+
 
     }
 }

@@ -1,0 +1,39 @@
+
+-------------------------------------
+Date :: 22-04-2021 04:29:55 PM
+NameSpace :: UsersController
+Method :: GetManufactureDetailes
+Values :: 
+Error Message :: Non-static method requires a target.
+Exception ::System.Reflection.TargetException: Non-static method requires a target.
+   at System.Reflection.RuntimeMethodInfo.CheckConsistency(Object target)
+   at System.Reflection.RuntimeMethodInfo.InvokeArgumentsCheck(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, BindingFlags invokeAttr, Binder binder, Object[] index, CultureInfo culture)
+   at System.Reflection.RuntimePropertyInfo.GetValue(Object obj, Object[] index)
+   at System.Reflection.PropertyInfo.GetValue(Object obj)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.ReflectionEvaluator.VisitMember(MemberExpression node)
+   at System.Linq.Expressions.MemberExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.ReflectionEvaluator.Evaluate(Expression node)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.EvaluateSubtree(Expression subtree)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.Visit(Expression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.Visit(Expression node)
+   at MongoDB.Driver.Linq.Processors.PartialEvaluator.Evaluate(Expression node)
+   at MongoDB.Driver.Linq.Translators.PredicateTranslator.Translate[TDocument](Expression`1 predicate, IBsonSerializer`1 parameterSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.ExpressionFilterDefinition`1.Render(IBsonSerializer`1 documentSerializer, IBsonSerializerRegistry serializerRegistry)
+   at MongoDB.Driver.MongoCollectionImpl`1.CreateFindOperation[TProjection](FilterDefinition`1 filter, FindOptions`2 options)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](IClientSessionHandle session, FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.<>c__DisplayClass41_0`1.<FindSync>b__0(IClientSessionHandle session)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.ToList[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at EVCharging.Services.UserServices.GetManufactureModelDetailes(String Name) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging.Services\Services\UserServices.cs:line 255
+   at EVCharging.Controllers.UsersController.GetManufactureModelDetailes(String Name) in E:\collections\EVGitHub\EV_Charging_API_Services\EVCharging\Controllers\UsersController.cs:line 250
+-------------------------------------
+
+

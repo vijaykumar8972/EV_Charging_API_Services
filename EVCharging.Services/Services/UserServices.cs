@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using System.Linq;
 using System.Net.Mail;
 using System.Net.Mime;
 using System.Text;
@@ -26,6 +27,8 @@ namespace EVCharging.Services
         private readonly IEmailConfig _emailConfig;
 
         public int UserId { get; private set; }
+
+        public object GetAllFeedBack => throw new NotImplementedException();
 
         public UserServices(IEVChargingDatabaseSettings eVChargingDatabaseSettings, IEmailConfig emailConfig)
         {
@@ -101,7 +104,7 @@ namespace EVCharging.Services
             eVChargingDBContext.users.DeleteOne(n => n.Id == Id);
         }
 
-       
+
 
         public bool ForgetPassword(Users user)
         {
@@ -147,26 +150,25 @@ namespace EVCharging.Services
             List<LocationResponseViewModel> model = new List<LocationResponseViewModel>();
             foreach (var item in response)
             {
+                LocationResponseViewModel locationResponseView = new LocationResponseViewModel();
                 DataProviderViewMdel dataProvider = new DataProviderViewMdel();
                 UsageTypeViewMdel usageTypeView = new UsageTypeViewMdel();
                 AddressInfoMdel AddressInfo = new AddressInfoMdel();
                 ConnectionsMdel connections = new ConnectionsMdel();
                 LevelMdel levelMdel = new LevelMdel();
                 CurrentType currentType = new CurrentType();
-
-                LocationResponseViewModel locationResponseView = new LocationResponseViewModel();
-
                 List<LevelMdel> levelMdelmodel = new List<LevelMdel>();
                 List<CurrentType> currentTypes = new List<CurrentType>();
-
+                NumberOfPoints numberOfPoints = new NumberOfPoints();
                 dataProvider.Title = item.DataProvider.Title;
                 locationResponseView.DataProvider = dataProvider;
                 usageTypeView.IsPayAtLocation = item.UsageType.IsPayAtLocation;
                 usageTypeView.Title = item.UsageType.Title;
                 locationResponseView.usageTypeView = usageTypeView;
+                AddressInfo.Id = item.AddressInfo.ID;
                 AddressInfo.Title = item.AddressInfo.Title;
                 AddressInfo.AddressLine1 = item.AddressInfo.AddressLine1;
-                AddressInfo.Town = item.AddressInfo.Title;
+                AddressInfo.Town = item.AddressInfo.Town;
                 AddressInfo.StateOrProvince = item.AddressInfo.StateOrProvince;
                 AddressInfo.Postcode = item.AddressInfo.Postcode;
                 AddressInfo.Latitude = item.AddressInfo.Latitude;
@@ -181,23 +183,23 @@ namespace EVCharging.Services
                 locationResponseView.addressInfo = AddressInfo;
                 foreach (var conn in item.Connections)
                 {
-                    levelMdel.IsFastChargeCapable = conn.Level.IsFastChargeCapable;
                     levelMdel.PowerKW = conn.PowerKW;
-                    levelMdel.Title = conn.Level.Title;
-                    connections.Connenctions = conn.Level.Title;
+                    if (conn.Level != null)
+                    {
+                        levelMdel.IsFastChargeCapable = conn.Level.IsFastChargeCapable;
+                        levelMdel.Title = conn.Level.Title;
+                        connections.Connenctions = conn.Level.Title;
+                        currentType.Title = conn.Level.Title;
+                    }
                 }
                 locationResponseView.connectionsMdel = connections;
                 levelMdelmodel.Add(levelMdel);
                 locationResponseView.levelMdel = levelMdelmodel;
-
-                foreach (var conn in item.Connections)
-                {
-                    currentType.Title = conn.Level.Title;
-                }
                 locationResponseView.connectionsMdel = connections;
                 currentTypes.Add(currentType);
                 locationResponseView.currentType = currentTypes;
-                locationResponseView.numberOfPoints = item.NumberOfPoints;
+                numberOfPoints.NumberOfPoint = item.NumberOfPoints;
+                locationResponseView.numberOfPoints = numberOfPoints;
                 locationResponseView.dateLastStatusUpdate = item.DateLastStatusUpdate;
 
                 model.Add(locationResponseView);
@@ -207,11 +209,20 @@ namespace EVCharging.Services
             return model;
 
         }
-
+    
         private static List<LocationResponseModel> GetStations(UserMapParams user)
         {
             UriBuilder builder = new UriBuilder("https://api.openchargemap.io/v3/poi/");
-            builder.Query = "key=347654fb-65d0-435c-9239-15523ae572d7&output=json&countrycode=IN&distanceunit=km&maxresults=" + user.MaxResult+ "&distance="+user.Distance+"&latitude="+user.Latitude+"&longitude="+user.longitude;
+            if (user.Latitude != 0)
+            {
+                builder.Query = "key=347654fb-65d0-435c-9239-15523ae572d7&output=json&countrycode=IN&distanceunit=km&maxresults=" + user.MaxResult + "&distance=" + user.Distance + "&latitude=" + user.Latitude + "&longitude=" + user.longitude;
+            }
+            else if ((user.Latitude == 0) && (user.MaxResult != 0))
+            {
+                builder.Query = "key=347654fb-65d0-435c-9239-15523ae572d7&output=json&countrycode=IN&maxresults=" + user.MaxResult;
+            }
+
+
 
             HttpClient client = new HttpClient();
             var result = client.GetAsync(builder.Uri).Result;
@@ -227,10 +238,14 @@ namespace EVCharging.Services
             }
             return response;
         }
+        
         public List<MSTManufacture> GetManufactureDetailes()
         {
+           
+            
             List<MSTManufacture> res = eVChargingDBContext.Manufacture.Find(n => true).ToList();
-            return res;
+            var data = res.OrderBy(x => x.ProvideId).ToList();
+            return data;
         }
 
         public List<MSTModel> GetManufactureModelDetailes(string Name)
@@ -246,7 +261,7 @@ namespace EVCharging.Services
             return users;
         }
 
-       
+
 
         public void Update(Users users, string Id)
         {
@@ -260,16 +275,15 @@ namespace EVCharging.Services
             }
         }
 
-       
-       
 
-       
 
-        
+
+
+
+
 
         public List<FeedBackMdel> GetFeedBackMdels()
         {
-
             List<FeedBackMdel> feedBackMdel = eVChargingDBContext.feedback.Find(n => true).ToList();
             return feedBackMdel;
         }
@@ -280,30 +294,24 @@ namespace EVCharging.Services
 
         public bool Create(FeedBackMdel feedBack)
         {
-            feedBack.id= MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            feedBack.id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            feedBack.CraetedBy = DateTime.Now;
+            feedBack.UpdatedAt = DateTime.Now;
             eVChargingDBContext.feedback.InsertOne(feedBack);
             return true;
         }
 
         public List<ChargingHistoryModel> chargingHistoryModels()
         {
-            List<ChargingHistoryModel>chargingHistoryModels = eVChargingDBContext.charginghistory.Find(n => true).ToList();
-            return chargingHistoryModels;
-        }
-
-        public object GetChargingHistoryId(string userId)
-        {
             List<ChargingHistoryModel> chargingHistoryModels = eVChargingDBContext.charginghistory.Find(n => true).ToList();
             return chargingHistoryModels;
         }
 
-        public object Create(ChargingHistoryModel chargingHistory)
+        public List<ChargingHistoryModel> GetChargingHistoryId(string userId)
         {
-            chargingHistory.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
-            eVChargingDBContext.charginghistory.InsertOne(chargingHistory);
-            return chargingHistory;
+            List<ChargingHistoryModel> chargingHistoryModels = eVChargingDBContext.charginghistory.Find(n =>n.UserId == userId).ToList();
+            return chargingHistoryModels;
         }
-
         public List<FeedBackMdel> GetFeedBackId(string userId)
         {
             List<FeedBackMdel> feedBackMdels = new List<FeedBackMdel>();
@@ -311,6 +319,63 @@ namespace EVCharging.Services
             return feedBackMdels;
         }
 
-      
+        public object GetAllData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<FavModel> GetFav(string userId)
+        {
+            List<FavModel> resu = eVChargingDBContext.favmodel.Find(n => n.Userid == userId).ToList();
+            return resu;
+
+        }
+
+        public FavModel postfav(FavModel favModel)
+        {
+                favModel.id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+                eVChargingDBContext.favmodel.InsertOne(favModel);
+                return favModel;
+        }
+
+        List<FeedBackMdel> IUserServices.GetAllFeedBack(string StationId)
+        {
+            List<FeedBackMdel> ress = eVChargingDBContext.feedback.Find(n => n.StationId == StationId).ToList();
+            return ress;
+        }
+
+        public ResponseViewModel postchargingHistory(ChargingHistoryModel chargingHistory)
+        {
+            var data = new ResponseViewModel();
+            chargingHistory.Id = MongoDB.Bson.ObjectId.GenerateNewId().ToString();
+            ChargingHistoryModel re = eVChargingDBContext.charginghistory.Find(y => y.UserId == chargingHistory.UserId && y.StationId == chargingHistory.StationId).FirstOrDefault();
+            if (re == null)
+            {
+                Users res = eVChargingDBContext.users.Find(r => r.Id == chargingHistory.UserId).FirstOrDefault();
+                if (res == null)
+                {
+                    return null;
+                }
+                eVChargingDBContext.charginghistory.InsertOne(chargingHistory);
+                
+                data.StatusCode = "200";
+                data.Messages = "data saved Successfully";
+                return data;
+
+            }
+            else
+            {
+                data.StatusCode = "208";
+                data.Messages = "Station Already Stored...";
+                return data;
+            }
+          
+        }
+
+        public ChargingHistoryModel GetCheckChargingHistoryId(string userId, string StationId)
+        {
+            var res = eVChargingDBContext.charginghistory.Find(n=>n.UserId==userId && n.StationId==StationId).FirstOrDefault();
+            return res;
+        }
     }
 }
